@@ -1,4 +1,5 @@
 import UIKit
+import SDWebImage
 
 class GameCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gameImageView: UIImageView!
@@ -8,10 +9,7 @@ class GameCollectionViewCell: UICollectionViewCell {
     func setup(with game: GameModel) {
         gameTitle.text = game.title
         releaseYear.text = game.releaseYear
-        ImageLoader.shared.loadImage(from: game.imageUrl) { [weak self] image in
-            guard let self = self else { return }
-            self.gameImageView.image = image
-        }
+        gameImageView.sd_setImage(with: URL(string: game.imageUrl))
     }
     
     override func layoutSubviews() {
