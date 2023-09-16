@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hFt-tB-etn">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Xc-4N-Mx2">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" name="LightBlue"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Enf-Ob-mPF">
+                                    <size key="itemSize" width="391" height="122"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCollectionViewCell" id="gHh-cM-Y8U" customClass="GameCollectionViewCell" customModule="GameStore" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="0.0" width="391" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FQ3-03-Ng1">
+                                            <rect key="frame" x="0.0" y="0.0" width="391" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-XY-jgx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="391" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="8ee-lo-xzp"/>
+                                                        <constraint firstAttribute="width" constant="391" id="hq3-kN-xHX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWr-r8-Ikp">
+                                                    <rect key="frame" x="10" y="119" width="33.666666666666664" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyE-S7-Ms1">
+                                                    <rect key="frame" x="10" y="91" width="41.333333333333336" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FyE-S7-Ms1" firstAttribute="leading" secondItem="FQ3-03-Ng1" secondAttribute="leading" constant="10" id="0eN-cU-QA0"/>
+                                                <constraint firstAttribute="bottom" secondItem="vsf-XY-jgx" secondAttribute="bottom" id="6QP-Xp-LQm"/>
+                                                <constraint firstItem="vsf-XY-jgx" firstAttribute="top" secondItem="FQ3-03-Ng1" secondAttribute="top" id="6ct-aA-FM6"/>
+                                                <constraint firstAttribute="bottom" secondItem="SWr-r8-Ikp" secondAttribute="bottom" constant="10" id="8ps-Mc-ah3"/>
+                                                <constraint firstAttribute="trailing" secondItem="vsf-XY-jgx" secondAttribute="trailing" id="K2t-jw-B0n"/>
+                                                <constraint firstItem="FyE-S7-Ms1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FQ3-03-Ng1" secondAttribute="top" constant="6" id="Qo4-cA-bPQ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SWr-r8-Ikp" secondAttribute="trailing" constant="6" id="T9E-ve-6bH"/>
+                                                <constraint firstItem="SWr-r8-Ikp" firstAttribute="top" secondItem="FyE-S7-Ms1" secondAttribute="bottom" constant="4" id="cFp-Jz-1Ja"/>
+                                                <constraint firstItem="vsf-XY-jgx" firstAttribute="leading" secondItem="FQ3-03-Ng1" secondAttribute="leading" id="dqU-5v-DjM"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FyE-S7-Ms1" secondAttribute="trailing" constant="6" id="eOR-7o-DuI"/>
+                                                <constraint firstItem="SWr-r8-Ikp" firstAttribute="leading" secondItem="FQ3-03-Ng1" secondAttribute="leading" constant="10" id="pFY-td-2Ht"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="391" height="150"/>
+                                        <connections>
+                                            <outlet property="gameImageView" destination="vsf-XY-jgx" id="xLI-AF-nGd"/>
+                                            <outlet property="gameTitle" destination="FyE-S7-Ms1" id="V4Q-Aj-nm8"/>
+                                            <outlet property="releaseYear" destination="SWr-r8-Ikp" id="MXt-2Q-1oY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="LightBlue"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Xc-4N-Mx2" secondAttribute="trailing" id="1mt-QW-Rt7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Xc-4N-Mx2" secondAttribute="bottom" id="Kk8-py-LO0"/>
+                            <constraint firstItem="2Xc-4N-Mx2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sd7-ic-alT"/>
+                            <constraint firstItem="2Xc-4N-Mx2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qMw-qM-19C"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="gamecontroller.fill" catalog="system" id="BHs-ne-1tt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="2Xc-4N-Mx2" id="Dom-lV-v6P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1028.2442748091603" y="1200"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Om4-5r-Ku8">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hFt-tB-etn" customClass="TabBarController" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mKx-wJ-JBt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="DarkBlue"/>
+                        <color key="barTintColor" name="DarkBlue"/>
+                        <color key="selectedImageTintColor" name="GreenNeon"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e6o-Gk-cmr"/>
+                        <segue destination="UWf-Ey-Alo" kind="relationship" relationship="viewControllers" id="a9i-Ot-5im"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Niy-X7-R86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-598" y="382"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="LmY-je-akf">
+            <objects>
+                <viewController id="UWf-Ey-Alo" customClass="ProfileViewController" customModule="GameStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M8t-xu-vPw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oTr-Eo-tu1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="qFb-U0-IRE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itf-Qo-5wg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="1201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="DarkBlue">
+            <color red="0.098039215686274508" green="0.10196078431372549" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreenNeon">
+            <color red="0.45882352941176469" green="0.9882352941176471" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.097999997437000275" green="0.10199999809265137" blue="0.21299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
