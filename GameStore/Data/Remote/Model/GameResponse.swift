@@ -71,7 +71,7 @@ extension GameResponse {
                 releaseYear: result?.released ?? "",
                 rating: Float(result?.rating ?? 0),
                 imageUrl: result?.backgroundImage ?? "",
-                platform: "PS4"
+                platform: result?.platforms.first?.platform.name ?? ""
             )
         } ?? []
     }

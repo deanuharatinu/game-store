@@ -6,10 +6,14 @@ class HomeViewController: UIViewController {
     
     private var games: [GameModel] = []
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.topItem?.title = "Game List"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,11 +52,13 @@ extension HomeViewController: UICollectionViewDataSource {
         return cell
     }
     
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameDetailViewController") as! GameDetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
