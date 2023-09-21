@@ -2,6 +2,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var games: [GameModel] = []
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
     }
     
     private func getGames() {
+        progressIndicator.startAnimating()
         let network = NetworkManager()
         network.getGameList(pageSize: 20) { result in
             switch result {
@@ -29,9 +31,17 @@ class HomeViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.games = data.toGameModel()
                         self.collectionView.reloadData()
+                        self.progressIndicator.stopAnimating()
                     }
                 case .failure(let error):
-                    NSLog(error.localizedDescription)
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+                        alert.addAction(dismissAction)
+                        self.present(alert, animated: true)
+                        NSLog(error.localizedDescription)
+                        self.progressIndicator.stopAnimating()
+                    }
             }
         }
     }
@@ -57,7 +67,8 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameDetailViewController") as! GameDetailViewController
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameDetailViewController") as? GameDetailViewController else { return }
+        vc.gameId = games[indexPath.row].id
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

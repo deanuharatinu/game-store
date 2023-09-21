@@ -2,6 +2,7 @@ import UIKit
 import SDWebImage
 
 class GameCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var releaseYear: UILabel!
     @IBOutlet weak var gameTitle: UILabel!
@@ -23,4 +24,5 @@ class GameCollectionViewCell: UICollectionViewCell {
             self.gameImageView.addGradient()
         }
     }
+    
 }

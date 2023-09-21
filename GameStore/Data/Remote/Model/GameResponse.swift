@@ -1,9 +1,3 @@
-//
-//  GameRemote.swift
-//  GameStore
-//
-//  Created by Deanu Haratinu on 16/09/23.
-//
 import Foundation
 
 // MARK: - Welcome
@@ -64,9 +58,11 @@ struct PlatformPlatform: Codable {
 }
 
 extension GameResponse {
+    
     func toGameModel() -> [GameModel] {
         return self.results?.map { result in
             return GameModel(
+                id: String(result?.id ?? 0),
                 title: result?.name ?? "",
                 releaseYear: result?.released ?? "",
                 rating: Float(result?.rating ?? 0),
@@ -75,4 +71,5 @@ extension GameResponse {
             )
         } ?? []
     }
+    
 }

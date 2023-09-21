@@ -1,13 +1,7 @@
-//
-//  NetworkManager.swift
-//  GameStore
-//
-//  Created by Deanu Haratinu on 14/09/23.
-//
-
 import UIKit
 
 class NetworkManager {
+    
     static let shared = NetworkManager()
     private let apiKey = "3ea22d93b162402b8690ef1cc1535b36"
     private let baseUrl = "https://api.rawg.io/api/games"
@@ -27,8 +21,8 @@ class NetworkManager {
         let request = URLRequest(url: url)
     
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let _ = error {
-                completed(.failure(NSError()))
+            if let error = error {
+                completed(.failure(error))
                 return
             }
             
@@ -55,4 +49,48 @@ class NetworkManager {
         
         task.resume()
     }
+    
+    func getGameDetail(gameId: String, completed: @escaping (Result<GameDetailResponse, Error>) -> Void) {
+        var components = URLComponents(string: baseUrl + "/\(gameId)")
+        components?.queryItems = [
+            URLQueryItem(name: "key", value: apiKey)
+        ]
+        
+        guard let url = components?.url else {
+            completed(.failure(NSError()))
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                completed(.failure(error))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(NSError()))
+                return
+            }
+            
+            guard let data = data else {
+                completed(.failure(NSError()))
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(GameDetailResponse.self, from: data)
+                completed(.success(result))
+            } catch {
+                completed(.failure(NSError()))
+                NSLog(error.localizedDescription)
+                return
+            }
+        }
+        
+        task.resume()
+    }
+    
 }

@@ -1,13 +1,7 @@
-//
-//  UtilsExtension.swift
-//  GameStore
-//
-//  Created by Deanu Haratinu on 19/09/23.
-//
-
 import Foundation
 
 extension String {
+    
     func toDateFormattedString(from fromDateFormat: String, to toDateFormat: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = fromDateFormat
@@ -17,4 +11,5 @@ extension String {
         dateFormatter.dateFormat = toDateFormat
         return dateFormatter.string(from: date)
     }
+    
 }
