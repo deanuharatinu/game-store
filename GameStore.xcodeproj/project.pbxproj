@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4711C9A62ABBE71B0078A6B3 /* GameDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711C9A52ABBE71B0078A6B3 /* GameDetailModel.swift */; };
 		4711C9A82ABBE7290078A6B3 /* GameDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711C9A72ABBE7290078A6B3 /* GameDetailResponse.swift */; };
+		4779C7D22ABEAC3C0000C05E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779C7D12ABEAC3C0000C05E /* SceneDelegate.swift */; };
 		478D6B262AB97C4600903744 /* UtilsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D6B252AB97C4600903744 /* UtilsExtension.swift */; };
 		478D6B282ABA05CA00903744 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D6B272ABA05CA00903744 /* GameDetailViewController.swift */; };
 		47ABFCB72AB5730F004C9973 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABFCB62AB5730F004C9973 /* UIExtensions.swift */; };
@@ -24,12 +25,12 @@
 		47CD8B7A2AB343CB00DB1695 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD8B792AB343CB00DB1695 /* NetworkManager.swift */; };
 		47CD8B7D2AB34A3500DB1695 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD8B7C2AB34A3500DB1695 /* GameModel.swift */; };
 		47CD8B7F2AB3500200DB1695 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD8B7E2AB3500200DB1695 /* GameCollectionViewCell.swift */; };
-		47F13A3C2ABCAD9C007D5EB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F13A3B2ABCAD9C007D5EB3 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4711C9A52ABBE71B0078A6B3 /* GameDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailModel.swift; sourceTree = "<group>"; };
 		4711C9A72ABBE7290078A6B3 /* GameDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailResponse.swift; sourceTree = "<group>"; };
+		4779C7D12ABEAC3C0000C05E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		478D6B252AB97C4600903744 /* UtilsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtension.swift; sourceTree = "<group>"; };
 		478D6B272ABA05CA00903744 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		47ABFCB62AB5730F004C9973 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		47CD8B792AB343CB00DB1695 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		47CD8B7C2AB34A3500DB1695 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		47CD8B7E2AB3500200DB1695 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
-		47F13A3B2ABCAD9C007D5EB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../.Trash/SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,12 @@
 				47CD8B722AB33BDD00DB1695 /* Profile */,
 				47CD8B712AB33BD100DB1695 /* Home */,
 				47CD8B5D2AB339CB00DB1695 /* AppDelegate.swift */,
-				47F13A3B2ABCAD9C007D5EB3 /* SceneDelegate.swift */,
 				47CD8B632AB339CB00DB1695 /* Main.storyboard */,
 				47CD8B732AB33FE600DB1695 /* TabBarController.swift */,
 				47CD8B662AB339CE00DB1695 /* Assets.xcassets */,
 				47CD8B682AB339CE00DB1695 /* LaunchScreen.storyboard */,
 				47CD8B6B2AB339CE00DB1695 /* Info.plist */,
+				4779C7D12ABEAC3C0000C05E /* SceneDelegate.swift */,
 			);
 			path = GameStore;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					47CD8B592AB339CB00DB1695 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -236,7 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47CD8B7F2AB3500200DB1695 /* GameCollectionViewCell.swift in Sources */,
-				47F13A3C2ABCAD9C007D5EB3 /* SceneDelegate.swift in Sources */,
+				4779C7D22ABEAC3C0000C05E /* SceneDelegate.swift in Sources */,
 				478D6B282ABA05CA00903744 /* GameDetailViewController.swift in Sources */,
 				47CD8B7A2AB343CB00DB1695 /* NetworkManager.swift in Sources */,
 				47CD8B622AB339CB00DB1695 /* HomeViewController.swift in Sources */,
@@ -310,6 +310,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -370,6 +371,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
