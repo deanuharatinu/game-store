@@ -3,10 +3,6 @@ import Foundation
 // MARK: - Welcome
 struct GameResponse: Codable {
     let results: [GameResult?]?
-    
-    enum CodingKeys: String, CodingKey {
-        case results = "results"
-    }
 }
 
 // MARK: - GameResult
@@ -33,28 +29,16 @@ struct GameResult: Codable {
 // MARK: - Genre
 struct Genre: Codable {
     let name: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case name
-    }
 }
 
 // MARK: - PlatformElement
 struct PlatformElement: Codable {
     let platform: PlatformPlatform
-
-    enum CodingKeys: String, CodingKey {
-        case platform
-    }
 }
 
 // MARK: - PlatformPlatform
 struct PlatformPlatform: Codable {
     let name: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case name
-    }
 }
 
 extension GameResponse {

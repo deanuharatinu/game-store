@@ -17,13 +17,9 @@ struct GameDetailResponse: Codable {
     }
 }
 
-// MARK: - Developer
+// MARK: - item
 struct Item: Codable {
     let name: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case name
-    }
 }
 
 extension GameDetailResponse {
