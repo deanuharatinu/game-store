@@ -15,7 +15,7 @@ struct GameResult: Codable {
     let ratingTop: Int?
     let platforms: [PlatformElement]
     let genres: [Genre]
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, released
         case backgroundImage = "background_image"

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4711C9A62ABBE71B0078A6B3 /* GameDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711C9A52ABBE71B0078A6B3 /* GameDetailModel.swift */; };
 		4711C9A82ABBE7290078A6B3 /* GameDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711C9A72ABBE7290078A6B3 /* GameDetailResponse.swift */; };
+		4759DCDD2ACF03DB00E3B354 /* TMDB-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4759DCDC2ACF03DB00E3B354 /* TMDB-info.plist */; };
+		4759DCDF2ACF056D00E3B354 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4759DCDE2ACF056D00E3B354 /* .gitignore */; };
+		475B4FAD2AD1289400F0A1D3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 475B4FAC2AD1289400F0A1D3 /* .swiftlint.yml */; };
+		475B4FAF2AD12B5600F0A1D3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475B4FAE2AD12B5600F0A1D3 /* Errors.swift */; };
 		4779C7D22ABEAC3C0000C05E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779C7D12ABEAC3C0000C05E /* SceneDelegate.swift */; };
 		478D6B262AB97C4600903744 /* UtilsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D6B252AB97C4600903744 /* UtilsExtension.swift */; };
 		478D6B282ABA05CA00903744 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D6B272ABA05CA00903744 /* GameDetailViewController.swift */; };
@@ -25,11 +29,18 @@
 		47CD8B7A2AB343CB00DB1695 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD8B792AB343CB00DB1695 /* NetworkManager.swift */; };
 		47CD8B7D2AB34A3500DB1695 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD8B7C2AB34A3500DB1695 /* GameModel.swift */; };
 		47CD8B7F2AB3500200DB1695 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CD8B7E2AB3500200DB1695 /* GameCollectionViewCell.swift */; };
+		47DF93ED2ACF1D8000078679 /* Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47DF93EB2ACF1D8000078679 /* Game.xcdatamodeld */; };
+		47DF93F02ACF1E1800078679 /* GameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF93EF2ACF1E1800078679 /* GameProvider.swift */; };
+		47DF93F22ACF1F8500078679 /* GameDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DF93F12ACF1F8500078679 /* GameDetailEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4711C9A52ABBE71B0078A6B3 /* GameDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailModel.swift; sourceTree = "<group>"; };
 		4711C9A72ABBE7290078A6B3 /* GameDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailResponse.swift; sourceTree = "<group>"; };
+		4759DCDC2ACF03DB00E3B354 /* TMDB-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-info.plist"; sourceTree = "<group>"; };
+		4759DCDE2ACF056D00E3B354 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		475B4FAC2AD1289400F0A1D3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		475B4FAE2AD12B5600F0A1D3 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		4779C7D12ABEAC3C0000C05E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		478D6B252AB97C4600903744 /* UtilsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsExtension.swift; sourceTree = "<group>"; };
 		478D6B272ABA05CA00903744 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,9 @@
 		47CD8B792AB343CB00DB1695 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		47CD8B7C2AB34A3500DB1695 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		47CD8B7E2AB3500200DB1695 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		47DF93EC2ACF1D8000078679 /* Movie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movie.xcdatamodel; sourceTree = "<group>"; };
+		47DF93EF2ACF1E1800078679 /* GameProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProvider.swift; sourceTree = "<group>"; };
+		47DF93F12ACF1F8500078679 /* GameDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 			children = (
 				47ABFCB62AB5730F004C9973 /* UIExtensions.swift */,
 				478D6B252AB97C4600903744 /* UtilsExtension.swift */,
+				475B4FAE2AD12B5600F0A1D3 /* Errors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -82,6 +97,7 @@
 		47CD8B512AB339CB00DB1695 = {
 			isa = PBXGroup;
 			children = (
+				475B4FAC2AD1289400F0A1D3 /* .swiftlint.yml */,
 				47CD8B5C2AB339CB00DB1695 /* GameStore */,
 				47CD8B5B2AB339CB00DB1695 /* Products */,
 			);
@@ -109,6 +125,8 @@
 				47CD8B682AB339CE00DB1695 /* LaunchScreen.storyboard */,
 				47CD8B6B2AB339CE00DB1695 /* Info.plist */,
 				4779C7D12ABEAC3C0000C05E /* SceneDelegate.swift */,
+				4759DCDC2ACF03DB00E3B354 /* TMDB-info.plist */,
+				4759DCDE2ACF056D00E3B354 /* .gitignore */,
 			);
 			path = GameStore;
 			sourceTree = "<group>";
@@ -134,6 +152,7 @@
 		47CD8B772AB3433C00DB1695 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				47DF93E72ACF1D0A00078679 /* Local */,
 				47CD8B7B2AB34A1100DB1695 /* Model */,
 				47CD8B782AB343B100DB1695 /* Remote */,
 			);
@@ -158,6 +177,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		47DF93E72ACF1D0A00078679 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				47DF93EE2ACF1E0100078679 /* Model */,
+				47DF93EB2ACF1D8000078679 /* Game.xcdatamodeld */,
+				47DF93EF2ACF1E1800078679 /* GameProvider.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		47DF93EE2ACF1E0100078679 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47DF93F12ACF1F8500078679 /* GameDetailEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +205,7 @@
 				47CD8B562AB339CB00DB1695 /* Sources */,
 				47CD8B572AB339CB00DB1695 /* Frameworks */,
 				47CD8B582AB339CB00DB1695 /* Resources */,
+				475B4FAA2AD1227500F0A1D3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -222,13 +260,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475B4FAD2AD1289400F0A1D3 /* .swiftlint.yml in Resources */,
+				4759DCDF2ACF056D00E3B354 /* .gitignore in Resources */,
 				47CD8B6A2AB339CE00DB1695 /* LaunchScreen.storyboard in Resources */,
+				4759DCDD2ACF03DB00E3B354 /* TMDB-info.plist in Resources */,
 				47CD8B672AB339CE00DB1695 /* Assets.xcassets in Resources */,
 				47CD8B652AB339CB00DB1695 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		475B4FAA2AD1227500F0A1D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47CD8B562AB339CB00DB1695 /* Sources */ = {
@@ -239,15 +300,19 @@
 				4779C7D22ABEAC3C0000C05E /* SceneDelegate.swift in Sources */,
 				478D6B282ABA05CA00903744 /* GameDetailViewController.swift in Sources */,
 				47CD8B7A2AB343CB00DB1695 /* NetworkManager.swift in Sources */,
+				47DF93F22ACF1F8500078679 /* GameDetailEntity.swift in Sources */,
 				47CD8B622AB339CB00DB1695 /* HomeViewController.swift in Sources */,
+				47DF93F02ACF1E1800078679 /* GameProvider.swift in Sources */,
 				47ABFCB72AB5730F004C9973 /* UIExtensions.swift in Sources */,
 				4711C9A82ABBE7290078A6B3 /* GameDetailResponse.swift in Sources */,
+				47DF93ED2ACF1D8000078679 /* Game.xcdatamodeld in Sources */,
 				47CD8B742AB33FE700DB1695 /* TabBarController.swift in Sources */,
 				47CD8B762AB342DE00DB1695 /* ProfileViewController.swift in Sources */,
 				47CD8B5E2AB339CB00DB1695 /* AppDelegate.swift in Sources */,
 				47ABFCBA2AB58A88004C9973 /* GameResponse.swift in Sources */,
 				478D6B262AB97C4600903744 /* UtilsExtension.swift in Sources */,
 				4711C9A62ABBE71B0078A6B3 /* GameDetailModel.swift in Sources */,
+				475B4FAF2AD12B5600F0A1D3 /* Errors.swift in Sources */,
 				47CD8B7D2AB34A3500DB1695 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +375,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -371,7 +436,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -491,6 +556,19 @@
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		47DF93EB2ACF1D8000078679 /* Game.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47DF93EC2ACF1D8000078679 /* Movie.xcdatamodel */,
+			);
+			currentVersion = 47DF93EC2ACF1D8000078679 /* Movie.xcdatamodel */;
+			path = Game.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 47CD8B522AB339CB00DB1695 /* Project object */;
 }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum GeneralError: Error {
+    case error(errorMessage: String)
+    case unknownError
+}

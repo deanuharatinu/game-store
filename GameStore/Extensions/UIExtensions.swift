@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIImageView {
-    
+
     func addGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
@@ -10,7 +10,7 @@ extension UIImageView {
         gradient.endPoint = CGPoint(x: 0, y: 0.95)
         self.layer.addSublayer(gradient)
     }
-    
+
     func makeRounded() {
         layer.borderWidth = 1
         layer.masksToBounds = false
@@ -18,5 +18,5 @@ extension UIImageView {
         layer.cornerRadius = self.frame.height / 2
         clipsToBounds = true
     }
-    
+
 }

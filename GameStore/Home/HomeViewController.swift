@@ -27,21 +27,25 @@ class HomeViewController: UIViewController {
         let network = NetworkManager()
         network.getGameList(pageSize: 20) { result in
             switch result {
-                case .success(let data):
-                    DispatchQueue.main.async {
+            case .success(let data):
+                DispatchQueue.main.async {
                         self.games = data.toGameModel()
                         self.collectionView.reloadData()
                         self.progressIndicator.stopAnimating()
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-                        alert.addAction(dismissAction)
-                        self.present(alert, animated: true)
-                        NSLog(error.localizedDescription)
-                        self.progressIndicator.stopAnimating()
-                    }
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(
+                        title: "Error",
+                        message: error.localizedDescription,
+                        preferredStyle: .alert
+                    )
+                    let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+                    alert.addAction(dismissAction)
+                    self.present(alert, animated: true)
+                    NSLog(error.localizedDescription)
+                    self.progressIndicator.stopAnimating()
+                }
             }
         }
     }
@@ -54,22 +58,33 @@ extension HomeViewController: UICollectionViewDataSource {
         return games.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCollectionViewCell", for: indexPath) as? GameCollectionViewCell else {
-            return UICollectionViewCell()
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: "GameCollectionViewCell",
+                for: indexPath
+            ) as? GameCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            
+            cell.setup(with: games[indexPath.row])
+            return cell
         }
-        cell.setup(with: games[indexPath.row])
-        return cell
-    }
     
 }
 
 extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameDetailViewController") as? GameDetailViewController else { return }
-        vc.gameId = games[indexPath.row].id
-        self.navigationController?.pushViewController(vc, animated: true)
+        guard let viewController = self.storyboard?.instantiateViewController(
+            withIdentifier: "GameDetailViewController"
+        ) as? GameDetailViewController else {
+            return
+        }
+        
+        viewController.gameId = games[indexPath.row].id
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

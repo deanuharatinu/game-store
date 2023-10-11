@@ -1,4 +1,5 @@
 struct GameDetailModel: Codable {
+    let id: String
     let title: String
     let releaseYear: String
     let rating: Float
@@ -7,4 +8,3 @@ struct GameDetailModel: Codable {
     let genre: String
     let description: String
 }
-

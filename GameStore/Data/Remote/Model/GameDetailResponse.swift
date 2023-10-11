@@ -10,7 +10,7 @@ struct GameDetailResponse: Codable {
     let rating: Double?
     let platforms: [PlatformElement?]?
     let genres: [Item?]?
-    
+
     enum CodingKeys: String, CodingKey {
         case id, name, description, released, platforms, genres, rating
         case backgroundImage = "background_image"
@@ -23,7 +23,7 @@ struct Item: Codable {
 }
 
 extension GameDetailResponse {
-    
+
     func toGameDetailModel() -> GameDetailModel {
         let platform = self.platforms?
             .compactMap { $0?.platform.name }
@@ -37,6 +37,7 @@ extension GameDetailResponse {
             .replacingOccurrences(of: "<br />", with: "")
         
         return GameDetailModel(
+            id: String(self.id),
             title: self.name ?? "",
             releaseYear: self.released ?? "",
             rating: Float(self.rating ?? 0),
@@ -46,5 +47,5 @@ extension GameDetailResponse {
             description: description ?? ""
         )
     }
-    
+
 }
